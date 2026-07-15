@@ -1,0 +1,322 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #202020;
+  background-color: #f4f4f4;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.pagina {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  padding: 35px 0 20px;
+}
+
+
+.encabezado {
+  margin-bottom: 28px;
+}
+
+.encabezado-etiqueta {
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #666;
+}
+
+.encabezado h1 {
+ 
+  margin: 0;
+  font-size: 34px;
+}
+
+.encabezado-descripcion {
+  margin: 8px 0 0;
+  color: #666;
+}
+
+
+.panel-principal {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 22px;
+  align-items: stretch;
+}
+
+
+.formulario {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 25px;
+  background-color: white;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+}
+
+.formulario h2 {
+  margin: 0 0 4px;
+  font-size: 22px;
+}
+
+label {
+  display: grid;
+  gap: 7px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 11px 12px;
+  color: #222;
+  background-color: white;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #555;
+  outline-offset: 1px;
+  border-color: #555;
+}
+
+
+.botones-formulario {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 16px;
+  color: white;
+  background-color: #292929;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+.boton-cancelar {
+  color: #333;
+  background-color: #dedede;
+}
+
+.boton-cancelar:hover {
+  background-color: #c9c9c9;
+}
+
+
+.error {
+  margin: 0;
+  padding: 10px 12px;
+  color: #7d1f1f;
+  background-color: #f8eeee;
+  border: 1px solid #dfbcbc;
+  border-radius: 5px;
+}
+
+
+.panel-resumen {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 25px;
+  background-color: white;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+}
+
+.panel-resumen h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.texto-secundario {
+  margin: 6px 0 0;
+  color: #707070;
+}
+
+.estadisticas {
+  display: grid;
+  gap: 12px;
+}
+
+.estadistica {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #dedede;
+}
+
+.estadistica span {
+  color: #555;
+}
+
+.estadistica strong {
+  font-size: 22px;
+}
+
+.filtro {
+  margin-top: auto;
+}
+
+
+.seccion-productos {
+  margin-top: 25px;
+  padding: 25px;
+  background-color: white;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+}
+
+.encabezado-tabla {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.encabezado-tabla h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.encabezado-tabla p {
+  margin: 6px 0 0;
+  color: #707070;
+}
+
+
+.contenedor-tabla {
+  overflow-x: auto;
+  border: 1px solid #d8d8d8;
+  border-radius: 6px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #dedede;
+}
+
+th {
+  color: white;
+  background-color: #303030;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+
+.acciones {
+  display: flex;
+  gap: 8px;
+}
+
+.boton-editar {
+  background-color: #666;
+}
+
+.boton-eliminar {
+  background-color: #333;
+}
+
+.boton-editar:hover,
+.boton-eliminar:hover {
+  background-color: #4e4e4e;
+}
+
+.sin-productos {
+  padding: 30px;
+  color: #666;
+  text-align: center;
+}
+
+
+.pie-pagina {
+  margin-top: 28px;
+  padding: 18px;
+  color: #666;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+
+.pie-pagina p {
+  margin: 0;
+}
+
+
+@media (max-width: 800px) {
+  .panel-principal {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-resumen {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .pagina {
+    width: 94%;
+    padding-top: 22px;
+  }
+
+  .encabezado h1 {
+    font-size: 28px;
+  }
+
+  .formulario,
+  .panel-resumen,
+  .seccion-productos {
+    padding: 18px;
+  }
+
+  .acciones {
+    flex-direction: column;
+  }
+
+  .botones-formulario {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  th,
+  td {
+    padding: 11px;
+  }
+}
